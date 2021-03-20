@@ -19,14 +19,14 @@ namespace WindowsFormsApp3
         public int[,] mask = new int[3, 3] { { 1, 1, 1 }, { 1, 1, 1 }, { 1, 1, 1 } };
         bool filters = false;
         Color pixelColor;
-
-
-
+        
 
         public Form1()
         {
             InitializeComponent();
             bitmaps = new Stack<Bitmap>();
+            
+
         }
 
         private void openImageToolStrip_Click(object sender, EventArgs e)
@@ -132,12 +132,29 @@ namespace WindowsFormsApp3
             backgroundWorker1.RunWorkerAsync(filter);
         }
 
-        
+
         private void гистограммаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Filters filter = new StretchFilter();
-            backgroundWorker1.RunWorkerAsync(filter);
+           
+                _ = new GrayScaleFilter();
+                int[][] histogram = new int[3][];
+                histogram[0] = new int[256];
+                histogram[1] = new int[256];
+                histogram[2] = new int[256];
+                for (int x = 0; x < image.Width; x++)
+                    for (int y = 0; y < image.Height; y++)
+                    {
+                        Color sourceColor = image.GetPixel(x, y);
+                        histogram[0][sourceColor.R]++;
+                        histogram[1][sourceColor.G]++;
+                        histogram[2][sourceColor.B]++;
+                    }
+                Form2 histogramView = new Form2();
+                histogramView.ShowRGBHistogram(histogram);
+            
+
         }
+    
 
         private void sharpnessToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -190,7 +207,14 @@ namespace WindowsFormsApp3
                 filters = false;
             }
         }
+
+        private void strechingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new linearStretchingFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
+    
    
 
 }

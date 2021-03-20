@@ -51,11 +51,13 @@
             this.gradToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.гистограммаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.correctionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.strechingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -94,7 +96,8 @@
             this.medianToolStripMenuItem,
             this.mathMorphologyToolStripMenuItem,
             this.гистограммаToolStripMenuItem,
-            this.correctionToolStripMenuItem});
+            this.correctionToolStripMenuItem,
+            this.strechingToolStripMenuItem});
             this.filtersToolStripMenuItem.Name = "filtersToolStripMenuItem";
             this.filtersToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.filtersToolStripMenuItem.Text = "filters";
@@ -107,7 +110,7 @@
             this.waveToolStripMenuItem,
             this.shiftToolStripMenuItem});
             this.tochechnyeToolStripMenuItem.Name = "tochechnyeToolStripMenuItem";
-            this.tochechnyeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tochechnyeToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.tochechnyeToolStripMenuItem.Text = "tochechnye";
             // 
             // inversionToolStripMenuItem
@@ -146,7 +149,7 @@
             this.sharpnessToolStripMenuItem,
             this.pruitToolStripMenuItem});
             this.matrchnyeToolStripMenuItem.Name = "matrchnyeToolStripMenuItem";
-            this.matrchnyeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.matrchnyeToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.matrchnyeToolStripMenuItem.Text = "matrchnye";
             // 
             // razmytyeToolStripMenuItem
@@ -180,7 +183,7 @@
             // medianToolStripMenuItem
             // 
             this.medianToolStripMenuItem.Name = "medianToolStripMenuItem";
-            this.medianToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.medianToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.medianToolStripMenuItem.Text = "median";
             this.medianToolStripMenuItem.Click += new System.EventHandler(this.medianToolStripMenuItem_Click);
             // 
@@ -193,7 +196,7 @@
             this.closingToolStripMenuItem,
             this.gradToolStripMenuItem});
             this.mathMorphologyToolStripMenuItem.Name = "mathMorphologyToolStripMenuItem";
-            this.mathMorphologyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mathMorphologyToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.mathMorphologyToolStripMenuItem.Text = "MathMorphology";
             // 
             // dilationToolStripMenuItem
@@ -234,16 +237,23 @@
             // гистограммаToolStripMenuItem
             // 
             this.гистограммаToolStripMenuItem.Name = "гистограммаToolStripMenuItem";
-            this.гистограммаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.гистограммаToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.гистограммаToolStripMenuItem.Text = "гистограмма";
             this.гистограммаToolStripMenuItem.Click += new System.EventHandler(this.гистограммаToolStripMenuItem_Click);
             // 
             // correctionToolStripMenuItem
             // 
             this.correctionToolStripMenuItem.Name = "correctionToolStripMenuItem";
-            this.correctionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.correctionToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.correctionToolStripMenuItem.Text = "Correction";
             this.correctionToolStripMenuItem.Click += new System.EventHandler(this.correctionToolStripMenuItem_Click);
+            // 
+            // strechingToolStripMenuItem
+            // 
+            this.strechingToolStripMenuItem.Name = "strechingToolStripMenuItem";
+            this.strechingToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.strechingToolStripMenuItem.Text = "streching";
+            this.strechingToolStripMenuItem.Click += new System.EventHandler(this.strechingToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -330,6 +340,8 @@
         private System.Windows.Forms.ToolStripMenuItem pruitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem correctionToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private System.Windows.Forms.ToolStripMenuItem strechingToolStripMenuItem;
+        private System.ComponentModel.BackgroundWorker backgroundWorker3;
     }
 }
 

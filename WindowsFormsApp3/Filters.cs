@@ -178,52 +178,17 @@ namespace Filters_Andrich
         }
     }
 
-        class StretchFilter : Filters
+
+    class linearStretchingFilter : Filters
     {
-        int Rmax = 0;
-        int Gmax = 0;
-        int Bmax = 0;
-
-        int Rmin = 256;
-        int Gmin = 256;
-        int Bmin = 256;
-         public override Bitmap processImage(Bitmap sourceImage, BackgroundWorker worker)
-        {
-            Bitmap resultImage = new Bitmap(sourceImage.Width, sourceImage.Height);
-
-            for (int i = 0; i < sourceImage.Width; ++i)
-                for (int j = 0; j < sourceImage.Height; ++j)
-                {
-                    Color sourceColor = sourceImage.GetPixel(i, j);
-                    if (sourceColor.R > Rmax)
-                        Rmax = sourceColor.R;
-                    if (sourceColor.G > Gmax)
-                        Gmax = sourceColor.G;
-                    if (sourceColor.B > Bmax)
-                        Bmax = sourceColor.B;
-
-                    if (sourceColor.R < Rmin)
-                        Rmin = sourceColor.R;
-                    if (sourceColor.G < Gmin)
-                        Gmin = sourceColor.G;
-                    if (sourceColor.B < Bmin)
-                        Bmin = sourceColor.B;
-                }
-            resultImage = base.processImage(sourceImage, worker);
-            return resultImage;
-        }
-
         protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
         {
-            Color sourceColor = sourceImage.GetPixel(x, y);
-
-            Color resultColor = Color.FromArgb(Clamp((sourceColor.R - Rmin) * 255 / (Rmax - Rmin), 0, 255),
-                                               Clamp((sourceColor.G - Gmin) * 255 / (Gmax - Gmin), 0, 255),
-                                               Clamp((sourceColor.B - Bmin) * 255 / (Bmax - Bmin), 0, 255));
-
-            return resultColor;
+            Color source = sourceImage.GetPixel(x, y);
+            byte intensity = (byte)(((0.2125 * source.R + 0.7154 * source.G + 0.0721 * source.B) / 3));
+            return Color.FromArgb(Clamp(source.R + intensity, 0, 255), Clamp(source.G + intensity, 0, 255), Clamp(source.B + intensity, 0, 255));
         }
     }
+
     class WaveFilter : Filters
     {
         protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
