@@ -58,6 +58,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
+            this.glassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sharraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -108,36 +110,37 @@
             this.inversionToolStripMenuItem,
             this.grayscaleToolStripMenuItem,
             this.waveToolStripMenuItem,
-            this.shiftToolStripMenuItem});
+            this.shiftToolStripMenuItem,
+            this.glassToolStripMenuItem});
             this.tochechnyeToolStripMenuItem.Name = "tochechnyeToolStripMenuItem";
-            this.tochechnyeToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.tochechnyeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tochechnyeToolStripMenuItem.Text = "tochechnye";
             // 
             // inversionToolStripMenuItem
             // 
             this.inversionToolStripMenuItem.Name = "inversionToolStripMenuItem";
-            this.inversionToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.inversionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.inversionToolStripMenuItem.Text = "inversion";
             this.inversionToolStripMenuItem.Click += new System.EventHandler(this.inversionToolStripMenuItem_Click);
             // 
             // grayscaleToolStripMenuItem
             // 
             this.grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
-            this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.grayscaleToolStripMenuItem.Text = "Grayscale";
             this.grayscaleToolStripMenuItem.Click += new System.EventHandler(this.grayscaleToolStripMenuItem_Click);
             // 
             // waveToolStripMenuItem
             // 
             this.waveToolStripMenuItem.Name = "waveToolStripMenuItem";
-            this.waveToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.waveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.waveToolStripMenuItem.Text = "Wave";
             this.waveToolStripMenuItem.Click += new System.EventHandler(this.waveToolStripMenuItem_Click);
             // 
             // shiftToolStripMenuItem
             // 
             this.shiftToolStripMenuItem.Name = "shiftToolStripMenuItem";
-            this.shiftToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.shiftToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.shiftToolStripMenuItem.Text = "Shift";
             this.shiftToolStripMenuItem.Click += new System.EventHandler(this.shiftToolStripMenuItem_Click);
             // 
@@ -147,9 +150,10 @@
             this.razmytyeToolStripMenuItem,
             this.gaussianToolStripMenuItem,
             this.sharpnessToolStripMenuItem,
-            this.pruitToolStripMenuItem});
+            this.pruitToolStripMenuItem,
+            this.sharraToolStripMenuItem});
             this.matrchnyeToolStripMenuItem.Name = "matrchnyeToolStripMenuItem";
-            this.matrchnyeToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.matrchnyeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.matrchnyeToolStripMenuItem.Text = "matrchnye";
             // 
             // razmytyeToolStripMenuItem
@@ -183,7 +187,7 @@
             // medianToolStripMenuItem
             // 
             this.medianToolStripMenuItem.Name = "medianToolStripMenuItem";
-            this.medianToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.medianToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.medianToolStripMenuItem.Text = "median";
             this.medianToolStripMenuItem.Click += new System.EventHandler(this.medianToolStripMenuItem_Click);
             // 
@@ -196,7 +200,7 @@
             this.closingToolStripMenuItem,
             this.gradToolStripMenuItem});
             this.mathMorphologyToolStripMenuItem.Name = "mathMorphologyToolStripMenuItem";
-            this.mathMorphologyToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.mathMorphologyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mathMorphologyToolStripMenuItem.Text = "MathMorphology";
             // 
             // dilationToolStripMenuItem
@@ -237,21 +241,21 @@
             // гистограммаToolStripMenuItem
             // 
             this.гистограммаToolStripMenuItem.Name = "гистограммаToolStripMenuItem";
-            this.гистограммаToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.гистограммаToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.гистограммаToolStripMenuItem.Text = "гистограмма";
             this.гистограммаToolStripMenuItem.Click += new System.EventHandler(this.гистограммаToolStripMenuItem_Click);
             // 
             // correctionToolStripMenuItem
             // 
             this.correctionToolStripMenuItem.Name = "correctionToolStripMenuItem";
-            this.correctionToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.correctionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.correctionToolStripMenuItem.Text = "Correction";
             this.correctionToolStripMenuItem.Click += new System.EventHandler(this.correctionToolStripMenuItem_Click);
             // 
             // strechingToolStripMenuItem
             // 
             this.strechingToolStripMenuItem.Name = "strechingToolStripMenuItem";
-            this.strechingToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.strechingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.strechingToolStripMenuItem.Text = "streching";
             this.strechingToolStripMenuItem.Click += new System.EventHandler(this.strechingToolStripMenuItem_Click);
             // 
@@ -289,6 +293,20 @@
             this.button1.Text = "CANCEL";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // glassToolStripMenuItem
+            // 
+            this.glassToolStripMenuItem.Name = "glassToolStripMenuItem";
+            this.glassToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.glassToolStripMenuItem.Text = "glass";
+            this.glassToolStripMenuItem.Click += new System.EventHandler(this.glassToolStripMenuItem_Click);
+            // 
+            // sharraToolStripMenuItem
+            // 
+            this.sharraToolStripMenuItem.Name = "sharraToolStripMenuItem";
+            this.sharraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sharraToolStripMenuItem.Text = "Sharra";
+            this.sharraToolStripMenuItem.Click += new System.EventHandler(this.sharraToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -342,6 +360,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
         private System.Windows.Forms.ToolStripMenuItem strechingToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker3;
+        private System.Windows.Forms.ToolStripMenuItem glassToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sharraToolStripMenuItem;
     }
 }
 

@@ -213,6 +213,20 @@ namespace WindowsFormsApp3
             Filters filter = new linearStretchingFilter();
             backgroundWorker1.RunWorkerAsync(filter);
         }
+
+        private void glassToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new glassFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+
+
+        }
+
+        private void sharraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Filters filter = new SharraFilter();
+            backgroundWorker1.RunWorkerAsync(filter);
+        }
     }
     
    

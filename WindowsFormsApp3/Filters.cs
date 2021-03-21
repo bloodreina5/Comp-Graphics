@@ -146,6 +146,25 @@ namespace Filters_Andrich
         }
 
     }
+    class SharraFilter : MatrixFilter
+    {
+        public SharraFilter()
+        {
+            float[,] sharraX = new float[,] { { 3,  0,  -3 },
+                                              { 10, 0, -10 },
+                                              { 3,  0,  -3 } };
+
+            createSharraKernel(sharraX);
+        }
+
+        public void createSharraKernel(float[,] res)
+        {
+            kernel = new float[3, 3];
+            for (int i = 0; i < 3; i++)
+                for (int j = 0; j < 3; j++)
+                    kernel[i, j] = res[i, j];
+        }
+    }
     class CorrectingColorFilter : Filters
     {
         private Color click_color;
@@ -177,9 +196,37 @@ namespace Filters_Andrich
             return resultColor;
         }
     }
+    class glassFilter : Filters
+    {
+        Random rnd1 = new Random(1942352);
+        Random rnd2 = new Random(4352347);
+
+        protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
+        {
+            int r1 = rnd1.Next(10);
+            int r2 = rnd2.Next(10);
+
+            int xR = Convert.ToInt32(x + r1);
+            int yR = Convert.ToInt32(y + r2);
+
+            if (xR < 0)
+                xR = x + 2;
+            if (xR >= sourceImage.Width)
+                xR = x - 2;
+            if (yR < 0)
+                yR = y + 2;
+            if (yR >= sourceImage.Height)
+                yR = y - 2;
 
 
-    class linearStretchingFilter : Filters
+            Color sourceColor = sourceImage.GetPixel(xR, yR);
+            Color resultColor = Color.FromArgb(sourceColor.R, sourceColor.G, sourceColor.B);
+            return resultColor;
+        }
+    }
+
+
+        class linearStretchingFilter : Filters
     {
         protected override Color calculateNewPixelColor(Bitmap sourceImage, int x, int y)
         {
